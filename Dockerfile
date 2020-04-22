@@ -1,4 +1,4 @@
-FROM openjdk:8-alpine
+FROM openjdk:8
 
 # Configuration variables.
 ENV SOFT		jira
@@ -15,9 +15,9 @@ ENV SOFT_VERSION	${JIRA_VERSION}
 ENV VISIBLECODE		true
 
 # download option
-RUN apk add --no-cache curl bash && \
-    curl -s https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/option.sh -o /option.sh && \
-    chmod 755 /option.sh
+RUN apt-get update && apt-get install curl bash && \
+	curl -s https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/option.sh -o /option.sh && \
+	chmod 755 /option.sh
 
 # copyright and timezone
 RUN curl -s https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/copyright.sh | bash
