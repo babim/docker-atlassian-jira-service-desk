@@ -1,10 +1,10 @@
-FROM openjdk:8
+FROM openjdk:11
 
 # Configuration variables.
 ENV SOFT		jira
 ENV SOFTSUB		servicedesk
-ENV OPENJDKV		8
-ENV JIRA_VERSION	4.8.0
+ENV OPENJDKV		11
+ENV JIRA_VERSION	4.8.1
 ENV JIRA_HOME		/var/atlassian/${SOFT}
 ENV JIRA_INSTALL	/opt/atlassian/${SOFT}
 ENV SOFT_HOME		${JIRA_HOME}
