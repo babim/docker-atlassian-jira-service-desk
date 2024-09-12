@@ -4,7 +4,7 @@ FROM eclipse-temurin:17-alpine
 ENV SOFT		    jira
 ENV SOFTSUB		    servicedesk
 ENV OPENJDKV		17
-ENV JIRA_VERSION	6.0.0
+ENV JIRA_VERSION	6.0.1
 ENV JIRA_HOME		/var/atlassian/${SOFT}
 ENV JIRA_INSTALL	/opt/atlassian/${SOFT}
 ENV SOFT_HOME		${JIRA_HOME}
